@@ -1,0 +1,96 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Mar 31 21:13:50 2022
+| Host         : Sky running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file data_sort_control_sets_placed.rpt
+| Design       : data_sort
+| Device       : xc7a100t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    18 |
+|    Minimum number of control sets                        |    18 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    37 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    18 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    11 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              42 |           17 |
+| No           | No                    | Yes                    |              19 |            5 |
+| No           | Yes                   | No                     |              76 |           21 |
+| Yes          | No                    | No                     |             101 |           34 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               5 |            1 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------+---------------------------------------------------------------------------------------+----------------------+------------------+----------------+
+|        Clock Signal        |                                     Enable Signal                                     |   Set/Reset Signal   | Slice Load Count | Bel Load Count |
++----------------------------+---------------------------------------------------------------------------------------+----------------------+------------------+----------------+
+|  s__0                      |                                                                                       | ST/AR[0]             |                1 |              1 |
+|  next_state_reg[1]_i_2_n_0 |                                                                                       |                      |                1 |              2 |
+|  clk_IBUF_BUFG             | dep/curh[3]_i_1_n_0                                                                   |                      |                4 |              4 |
+|  clk_IBUF_BUFG             | index                                                                                 | index[7]_i_1_n_0     |                1 |              5 |
+|  clk_IBUF_BUFG             | Ain[7]_i_1_n_0                                                                        |                      |                2 |              8 |
+|  tem_dpra__0               |                                                                                       |                      |                3 |              8 |
+|  nextState_reg[2]_i_2_n_0  |                                                                                       | ST/AR[0]             |                3 |             11 |
+|  clk_IBUF_BUFG             |                                                                                       |                      |                8 |             16 |
+|  clk_IBUF_BUFG             | Din[15]_i_1_n_0                                                                       |                      |                9 |             16 |
+|  nextd__0                  |                                                                                       |                      |                5 |             16 |
+|  clk_IBUF_BUFG             | count[0]_i_1__0_n_0                                                                   |                      |                4 |             17 |
+|  clk_IBUF_BUFG             |                                                                                       | ST/AR[0]             |                5 |             19 |
+|  clk_IBUF_BUFG             | a[7]_i_1_n_0                                                                          |                      |                9 |             24 |
+|  clk_IBUF_BUFG             |                                                                                       | dp/count[31]_i_1_n_0 |                9 |             32 |
+|  clk_IBUF_BUFG             |                                                                                       | dep/clear            |                8 |             32 |
+|  clk_IBUF_BUFG             | dep/real_flag                                                                         |                      |                6 |             32 |
+|  clk_IBUF_BUFG             | dmem/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_0_127_0_0_i_1_n_0   |                      |               16 |             64 |
+|  clk_IBUF_BUFG             | dmem/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_128_255_0_0_i_1_n_0 |                      |               16 |             64 |
++----------------------------+---------------------------------------------------------------------------------------+----------------------+------------------+----------------+
+
+

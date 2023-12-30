@@ -1,0 +1,1788 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Apr 13 18:30:59 2022
+# Process ID: 32688
+# Current directory: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent32236 D:\ComputerScience\cs_COD_Spring_2022\Lab4\lab4\lab4.xpr
+# Log file: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/vivado.log
+# Journal file: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/ComputerScience/CodeApp/Vivado/2019.2/data/ip'.
+update_compile_order -fileset sources_1
+close [ open D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/new/test_cpu.v w ]
+add_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/new/test_cpu.v
+update_compile_order -fileset sources_1
+create_ip -name dist_mem_gen -vendor xilinx.com -library ip -version 8.0 -module_name inst_mem2 -dir d:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip
+set_property -dict [list CONFIG.depth {256} CONFIG.data_width {32} CONFIG.Component_Name {inst_mem2} CONFIG.memory_type {rom} CONFIG.coefficient_file {C:/Users/Lenovo/Desktop/testIns_text.coe}] [get_ips inst_mem2]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'inst_mem2' to 'inst_mem2' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files d:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem2/inst_mem2.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'inst_mem2'...
+generate_target all [get_files  d:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem2/inst_mem2.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'inst_mem2'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'inst_mem2'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'inst_mem2'...
+catch { config_ip_cache -export [get_ips -all inst_mem2] }
+export_ip_user_files -of_objects [get_files d:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem2/inst_mem2.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem2/inst_mem2.xci]
+launch_runs -jobs 8 inst_mem2_synth_1
+[Wed Apr 13 18:41:50 2022] Launched inst_mem2_synth_1...
+Run output will be captured here: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/inst_mem2_synth_1/runme.log
+export_simulation -of_objects [get_files d:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem2/inst_mem2.xci] -directory D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/sim_scripts -ip_user_files_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files -ipstatic_source_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/modelsim} {questa=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/questa} {riviera=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/riviera} {activehdl=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name dist_mem_gen -vendor xilinx.com -library ip -version 8.0 -module_name data_mem2 -dir d:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip
+set_property -dict [list CONFIG.depth {256} CONFIG.data_width {32} CONFIG.Component_Name {data_mem2} CONFIG.memory_type {dual_port_ram} CONFIG.coefficient_file {C:/Users/Lenovo/Desktop/testIns_data.coe}] [get_ips data_mem2]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'data_mem2' to 'data_mem2' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files d:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem2/data_mem2.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'data_mem2'...
+generate_target all [get_files  d:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem2/data_mem2.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'data_mem2'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'data_mem2'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'data_mem2'...
+catch { config_ip_cache -export [get_ips -all data_mem2] }
+export_ip_user_files -of_objects [get_files d:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem2/data_mem2.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem2/data_mem2.xci]
+launch_runs -jobs 8 data_mem2_synth_1
+[Wed Apr 13 18:42:47 2022] Launched data_mem2_synth_1...
+Run output will be captured here: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/data_mem2_synth_1/runme.log
+export_simulation -of_objects [get_files d:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem2/data_mem2.xci] -directory D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/sim_scripts -ip_user_files_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files -ipstatic_source_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/modelsim} {questa=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/questa} {riviera=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/riviera} {activehdl=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse -scan_for_includes F:/MyDocuments/计算机ComputerScience/COD/COD_2021Spring-main/lab4/sim.v
+import_files -fileset sim_1 -norecurse F:/MyDocuments/计算机ComputerScience/COD/COD_2021Spring-main/lab4/sim.v
+update_compile_order -fileset sim_1
+set_property top test_for_cpu [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/ComputerScience/CodeApp/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_for_cpu' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/data_mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/testIns_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/data_mem2.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/inst_mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/testIns_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/inst_mem2.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/test_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/test_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text1.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text2.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_bubble_text.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_for_cpu_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem2/sim/data_mem2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_mem2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem2/sim/inst_mem2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module inst_mem2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/new/test_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/imports/lab4/sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_for_cpu
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+"xelab -wto 807c4e4b186a49939ef099d60c06bfc0 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_for_cpu_behav xil_defaultlib.test_for_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/ComputerScience/CodeApp/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 807c4e4b186a49939ef099d60c06bfc0 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_for_cpu_behav xil_defaultlib.test_for_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'rst' on this module [D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/imports/lab4/sim.v:5]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/ComputerScience/CodeApp/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_for_cpu' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/data_mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/testIns_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/data_mem2.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/inst_mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/testIns_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/inst_mem2.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/test_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/test_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text1.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text2.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_bubble_text.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_for_cpu_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem2/sim/data_mem2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_mem2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem2/sim/inst_mem2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module inst_mem2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/imports/new/a.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/imports/new/register_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/new/test_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/imports/lab4/sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_for_cpu
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+"xelab -wto 807c4e4b186a49939ef099d60c06bfc0 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_for_cpu_behav xil_defaultlib.test_for_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/ComputerScience/CodeApp/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 807c4e4b186a49939ef099d60c06bfc0 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_for_cpu_behav xil_defaultlib.test_for_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.inst_mem2
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.data_mem2
+Compiling module xil_defaultlib.test_cpu
+Compiling module xil_defaultlib.test_for_cpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_for_cpu_behav
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/xsim.dir/test_for_cpu_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Apr 13 18:47:40 2022...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_for_cpu_behav -key {Behavioral:sim_1:Functional:test_for_cpu} -tclbatch {test_for_cpu.tcl} -view {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg
+WARNING: Simulation object /sim/clk was not found in the design.
+WARNING: Simulation object /sim/rst was not found in the design.
+WARNING: Simulation object /sim/pc was not found in the design.
+WARNING: Simulation object /sim/cpu/instruction was not found in the design.
+WARNING: Simulation object /sim/cpu/alu_a was not found in the design.
+WARNING: Simulation object /sim/cpu/alu_b was not found in the design.
+WARNING: Simulation object /sim/cpu/alu_z was not found in the design.
+WARNING: Simulation object /sim/cpu/alu_out was not found in the design.
+WARNING: Simulation object /sim/cpu/rs1 was not found in the design.
+WARNING: Simulation object /sim/cpu/rs2 was not found in the design.
+WARNING: Simulation object /sim/cpu/extend_imm was not found in the design.
+WARNING: Simulation object /sim/cpu/data_mem/inst/ram_data[1] was not found in the design.
+WARNING: Simulation object /sim/cpu/data_mem/inst/ram_data[2] was not found in the design.
+source test_for_cpu.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: Too many words specified in data file data_mem2.mif
+WARNING in test_for_cpu.cpu.data_mem.inst at time                35000 ns: 
+Reading from out-of-range address. Max address in test_for_cpu.cpu.data_mem.inst is         255
+WARNING in test_for_cpu.cpu.data_mem.inst at time               225000 ns: 
+Reading from out-of-range address. Max address in test_for_cpu.cpu.data_mem.inst is         255
+$finish called at time : 1500 ns : File "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/imports/lab4/sim.v" Line 12
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_for_cpu_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 907.051 ; gain = 17.977
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/ComputerScience/CodeApp/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_for_cpu' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/data_mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/testIns_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/data_mem2.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/inst_mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/testIns_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/inst_mem2.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/test_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/test_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text1.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text2.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_bubble_text.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_for_cpu_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+"xelab -wto 807c4e4b186a49939ef099d60c06bfc0 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_for_cpu_behav xil_defaultlib.test_for_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/ComputerScience/CodeApp/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 807c4e4b186a49939ef099d60c06bfc0 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_for_cpu_behav xil_defaultlib.test_for_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: Too many words specified in data file data_mem2.mif
+WARNING in test_for_cpu.cpu.data_mem.inst at time                35000 ns: 
+Reading from out-of-range address. Max address in test_for_cpu.cpu.data_mem.inst is         255
+WARNING in test_for_cpu.cpu.data_mem.inst at time               225000 ns: 
+Reading from out-of-range address. Max address in test_for_cpu.cpu.data_mem.inst is         255
+$finish called at time : 1500 ns : File "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/imports/lab4/sim.v" Line 12
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 910.262 ; gain = 0.000
+update_files -from_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/pdu-v1.0.v -to_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/imports/Lab4/PDU-v0.21_0411.v -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/imports/Lab4/PDU-v0.21_0411.v' with file 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/pdu-v1.0.v'.
+INFO: [filemgmt 20-1080] Importing file from 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/pdu-v1.0.v' to 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/imports/Lab4/pdu-v1.0.v'.
+update_compile_order -fileset sources_1
+save_wave_config {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg}
+set_property top sim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+set_property -dict [list CONFIG.coefficient_file {C:/Users/Lenovo/Desktop/sort_text.coe}] [get_ips inst_mem]
+generate_target all [get_files  D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'inst_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'inst_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'inst_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'inst_mem'...
+catch { config_ip_cache -export [get_ips -all inst_mem] }
+export_ip_user_files -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci] -no_script -sync -force -quiet
+reset_run inst_mem_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/inst_mem_synth_1
+
+launch_runs -jobs 8 inst_mem_synth_1
+[Wed Apr 13 18:53:47 2022] Launched inst_mem_synth_1...
+Run output will be captured here: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/inst_mem_synth_1/runme.log
+export_simulation -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci] -directory D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/sim_scripts -ip_user_files_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files -ipstatic_source_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/modelsim} {questa=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/questa} {riviera=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/riviera} {activehdl=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property -dict [list CONFIG.coefficient_file {C:/Users/Lenovo/Desktop/sort_data.coe}] [get_ips data_mem]
+generate_target all [get_files  D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem/data_mem.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'data_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'data_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'data_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'data_mem'...
+catch { config_ip_cache -export [get_ips -all data_mem] }
+export_ip_user_files -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem/data_mem.xci] -no_script -sync -force -quiet
+reset_run data_mem_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/data_mem_synth_1
+
+launch_runs -jobs 8 data_mem_synth_1
+[Wed Apr 13 18:54:47 2022] Launched data_mem_synth_1...
+Run output will be captured here: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/data_mem_synth_1/runme.log
+export_simulation -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem/data_mem.xci] -directory D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/sim_scripts -ip_user_files_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files -ipstatic_source_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/modelsim} {questa=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/questa} {riviera=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/riviera} {activehdl=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property top test_for_sort [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/ComputerScience/CodeApp/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_for_sort' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/data_mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/testIns_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/data_mem2.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/inst_mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/testIns_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/inst_mem2.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/test_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/test_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text1.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text2.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_bubble_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/text.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_for_sort_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem/sim/data_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/sim/inst_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module inst_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/imports/new/a.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/imports/new/register_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_for_sort
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+"xelab -wto 807c4e4b186a49939ef099d60c06bfc0 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_for_sort_behav xil_defaultlib.test_for_sort xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/ComputerScience/CodeApp/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 807c4e4b186a49939ef099d60c06bfc0 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_for_sort_behav xil_defaultlib.test_for_sort xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.inst_mem
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.data_mem
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.test_for_sort
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_for_sort_behav
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/xsim.dir/test_for_sort_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Apr 13 18:55:47 2022...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_for_sort_behav -key {Behavioral:sim_1:Functional:test_for_sort} -tclbatch {test_for_sort.tcl} -view {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg
+WARNING: Simulation object /test_for_cpu/pc was not found in the design.
+WARNING: Simulation object /test_for_cpu/cpu/instruction was not found in the design.
+source test_for_sort.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: Too many words specified in data file data_mem.mif
+WARNING in test_for_sort.cpu.data_mem.inst at time                33000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time                55000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time                77000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time                99000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               121000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               143000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               165000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               187000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               209000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               231000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               253000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               275000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               297000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               319000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               341000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               347000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               375000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               397000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               419000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               441000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               463000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               485000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               507000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               529000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               551000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               573000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               595000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               617000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               639000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               661000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               667000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               695000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               717000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               739000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               761000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               783000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               805000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               827000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               849000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               871000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               893000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               915000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               937000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               959000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               965000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               993000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1015000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1037000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1059000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1081000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1103000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1125000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1147000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1169000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1191000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1213000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1235000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1241000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1269000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1291000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1313000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1335000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1357000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1379000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1401000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1423000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1445000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1467000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1489000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1495000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1523000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1545000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1567000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1589000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1611000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1633000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1655000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1677000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1699000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1721000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1727000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1755000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1777000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1799000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1821000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1843000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1865000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1887000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1909000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1931000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1937000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1965000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1987000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2009000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2031000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2053000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2075000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2097000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2119000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2125000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2153000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2175000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2197000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2219000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2241000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2263000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2285000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2291000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2319000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2341000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2363000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2385000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2407000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2429000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2435000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2463000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2485000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2507000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2529000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2551000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2557000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2585000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2607000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2629000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2651000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2657000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2685000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2707000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2729000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2735000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2763000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2785000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2791000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2819000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2825000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2837000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+$finish called at time : 5 us : File "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/new/testbench.v" Line 13
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_for_sort_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 956.191 ; gain = 1.070
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/ComputerScience/CodeApp/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_for_sort' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/data_mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/testIns_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/data_mem2.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/inst_mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/testIns_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/inst_mem2.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/test_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/test_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text1.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text2.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_bubble_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/text.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_for_sort_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem/sim/data_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/sim/inst_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module inst_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/imports/new/a.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/imports/new/register_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_for_sort
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+"xelab -wto 807c4e4b186a49939ef099d60c06bfc0 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_for_sort_behav xil_defaultlib.test_for_sort xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/ComputerScience/CodeApp/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 807c4e4b186a49939ef099d60c06bfc0 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_for_sort_behav xil_defaultlib.test_for_sort xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.inst_mem
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.data_mem
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.test_for_sort
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_for_sort_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: Too many words specified in data file data_mem.mif
+WARNING in test_for_sort.cpu.data_mem.inst at time                33000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time                55000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time                77000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time                99000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               121000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               143000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               165000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               187000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               209000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               231000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               253000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               275000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               297000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               319000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               341000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               347000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               375000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               397000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               419000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               441000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               463000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               485000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               507000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               529000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               551000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               573000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               595000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               617000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               639000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               661000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               667000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               695000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               717000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               739000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               761000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               783000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               805000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               827000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               849000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               871000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               893000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               915000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               937000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               959000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               965000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               993000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1015000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1037000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1059000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1081000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1103000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1125000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1147000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1169000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1191000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1213000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1235000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1241000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1269000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1291000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1313000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1335000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1357000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1379000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1401000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1423000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1445000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1467000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1489000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1495000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1523000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1545000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1567000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1589000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1611000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1633000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1655000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1677000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1699000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1721000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1727000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1755000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1777000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1799000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1821000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1843000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1865000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1887000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1909000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1931000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1937000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1965000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1987000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2009000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2031000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2053000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2075000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2097000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2119000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2125000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2153000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2175000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2197000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2219000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2241000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2263000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2285000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2291000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2319000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2341000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2363000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2385000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2407000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2429000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2435000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2463000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2485000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2507000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2529000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2551000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2557000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2585000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2607000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2629000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2651000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2657000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2685000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2707000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2729000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2735000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2763000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2785000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2791000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2819000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2825000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2837000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+$finish called at time : 5 us : File "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/new/testbench.v" Line 13
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 959.629 ; gain = 0.000
+set_property top test_for_cpu [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/simulate.log"
+save_wave_config {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/ComputerScience/CodeApp/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_for_cpu' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/data_mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/testIns_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/data_mem2.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/inst_mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/testIns_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/inst_mem2.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/test_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/test_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text1.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text2.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_bubble_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/text.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_for_cpu_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+"xelab -wto 807c4e4b186a49939ef099d60c06bfc0 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_for_cpu_behav xil_defaultlib.test_for_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/ComputerScience/CodeApp/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 807c4e4b186a49939ef099d60c06bfc0 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_for_cpu_behav xil_defaultlib.test_for_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.inst_mem2
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.data_mem2
+Compiling module xil_defaultlib.test_cpu
+Compiling module xil_defaultlib.test_for_cpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_for_cpu_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_for_cpu_behav -key {Behavioral:sim_1:Functional:test_for_cpu} -tclbatch {test_for_cpu.tcl} -view {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg
+WARNING: Simulation object /test_for_sort/clk was not found in the design.
+WARNING: Simulation object /test_for_sort/rst was not found in the design.
+WARNING: Simulation object /test_for_sort/pc was not found in the design.
+WARNING: Simulation object /test_for_sort/cpu/instruction was not found in the design.
+source test_for_cpu.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: Too many words specified in data file data_mem2.mif
+WARNING in test_for_cpu.cpu.data_mem.inst at time                35000 ns: 
+Reading from out-of-range address. Max address in test_for_cpu.cpu.data_mem.inst is         255
+WARNING in test_for_cpu.cpu.data_mem.inst at time               225000 ns: 
+Reading from out-of-range address. Max address in test_for_cpu.cpu.data_mem.inst is         255
+$finish called at time : 1500 ns : File "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/imports/lab4/sim.v" Line 12
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_for_cpu_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 967.344 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/ComputerScience/CodeApp/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_for_cpu' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/data_mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/testIns_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/data_mem2.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/inst_mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/testIns_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/inst_mem2.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/test_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/test_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text1.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text2.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_bubble_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/text.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_for_cpu_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+"xelab -wto 807c4e4b186a49939ef099d60c06bfc0 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_for_cpu_behav xil_defaultlib.test_for_cpu xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/ComputerScience/CodeApp/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 807c4e4b186a49939ef099d60c06bfc0 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_for_cpu_behav xil_defaultlib.test_for_cpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: Too many words specified in data file data_mem2.mif
+WARNING in test_for_cpu.cpu.data_mem.inst at time                35000 ns: 
+Reading from out-of-range address. Max address in test_for_cpu.cpu.data_mem.inst is         255
+WARNING in test_for_cpu.cpu.data_mem.inst at time               225000 ns: 
+Reading from out-of-range address. Max address in test_for_cpu.cpu.data_mem.inst is         255
+$finish called at time : 1500 ns : File "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/imports/lab4/sim.v" Line 12
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 967.344 ; gain = 0.000
+set_property top test_for_sort [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/simulate.log"
+save_wave_config {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/ComputerScience/CodeApp/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_for_sort' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/data_mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/testIns_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/data_mem2.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/inst_mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/testIns_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/inst_mem2.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/test_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/test_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text1.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_text2.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/sort_bubble_text.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/text.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_for_sort_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem/sim/data_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/sim/inst_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module inst_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/imports/new/a.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/imports/new/register_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_for_sort
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+"xelab -wto 807c4e4b186a49939ef099d60c06bfc0 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_for_sort_behav xil_defaultlib.test_for_sort xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/ComputerScience/CodeApp/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 807c4e4b186a49939ef099d60c06bfc0 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_for_sort_behav xil_defaultlib.test_for_sort xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.inst_mem
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.data_mem
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.test_for_sort
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_for_sort_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_for_sort_behav -key {Behavioral:sim_1:Functional:test_for_sort} -tclbatch {test_for_sort.tcl} -view {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg
+WARNING: Simulation object /test_for_cpu/pc was not found in the design.
+WARNING: Simulation object /test_for_cpu/cpu/instruction was not found in the design.
+source test_for_sort.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: Too many words specified in data file data_mem.mif
+WARNING in test_for_sort.cpu.data_mem.inst at time                33000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time                55000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time                77000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time                99000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               121000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               143000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               165000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               187000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               209000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               231000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               253000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               275000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               297000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               319000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               341000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               347000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               375000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               397000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               419000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               441000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               463000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               485000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               507000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               529000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               551000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               573000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               595000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               617000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               639000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               661000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               667000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               695000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               717000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               739000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               761000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               783000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               805000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               827000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               849000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               871000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               893000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               915000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               937000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               959000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               965000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time               993000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1015000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1037000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1059000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1081000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1103000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1125000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1147000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1169000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1191000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1213000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1235000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1241000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1269000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1291000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1313000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1335000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1357000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1379000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1401000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1423000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1445000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1467000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1489000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1495000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1523000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1545000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1567000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1589000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1611000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1633000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1655000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1677000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1699000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1721000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1727000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1755000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1777000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1799000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1821000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1843000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1865000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1887000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1909000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1931000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1937000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1965000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              1987000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2009000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2031000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2053000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2075000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2097000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2119000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2125000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2153000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2175000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2197000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2219000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2241000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2263000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2285000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2291000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2319000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2341000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2363000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2385000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2407000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2429000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2435000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2463000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2485000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2507000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2529000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2551000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2557000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2585000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2607000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2629000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2651000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2657000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2685000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2707000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2729000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2735000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2763000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2785000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2791000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2819000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2825000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+WARNING in test_for_sort.cpu.data_mem.inst at time              2837000 ns: 
+Reading from out-of-range address. Max address in test_for_sort.cpu.data_mem.inst is         255
+$finish called at time : 5 us : File "D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/new/testbench.v" Line 13
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_for_sort_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 967.344 ; gain = 0.000
+set_property -dict [list CONFIG.coefficient_file {C:/Users/Lenovo/Desktop/text.coe}] [get_ips inst_mem]
+generate_target all [get_files  D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'inst_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'inst_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'inst_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'inst_mem'...
+catch { config_ip_cache -export [get_ips -all inst_mem] }
+export_ip_user_files -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci] -no_script -sync -force -quiet
+reset_run inst_mem_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/inst_mem_synth_1
+
+launch_runs -jobs 8 inst_mem_synth_1
+[Wed Apr 13 20:06:17 2022] Launched inst_mem_synth_1...
+Run output will be captured here: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/inst_mem_synth_1/runme.log
+export_simulation -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci] -directory D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/sim_scripts -ip_user_files_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files -ipstatic_source_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/modelsim} {questa=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/questa} {riviera=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/riviera} {activehdl=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property -dict [list CONFIG.coefficient_file {C:/Users/Lenovo/Desktop/data.coe}] [get_ips data_mem]
+generate_target all [get_files  D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem/data_mem.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'data_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'data_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'data_mem'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'data_mem'...
+catch { config_ip_cache -export [get_ips -all data_mem] }
+export_ip_user_files -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem/data_mem.xci] -no_script -sync -force -quiet
+reset_run data_mem_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/data_mem_synth_1
+
+launch_runs -jobs 8 data_mem_synth_1
+[Wed Apr 13 20:06:53 2022] Launched data_mem_synth_1...
+Run output will be captured here: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/data_mem_synth_1/runme.log
+export_simulation -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem/data_mem.xci] -directory D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/sim_scripts -ip_user_files_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files -ipstatic_source_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/modelsim} {questa=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/questa} {riviera=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/riviera} {activehdl=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/new/pdu_test.v w ]
+add_files -fileset sim_1 D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/new/pdu_test.v
+update_compile_order -fileset sim_1
+set_property top pdu_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Apr 13 20:11:27 2022] Launched synth_1...
+Run output will be captured here: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/synth_1/runme.log
+[Wed Apr 13 20:11:27 2022] Launched impl_1...
+Run output will be captured here: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1036.074 ; gain = 4.387
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A8B604A
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Apr 13 20:31:16 2022] Launched synth_1...
+Run output will be captured here: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/synth_1/runme.log
+[Wed Apr 13 20:31:16 2022] Launched impl_1...
+Run output will be captured here: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+export_ip_user_files -of_objects  [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/new/pdu_test.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/new/pdu_test.v
+update_compile_order -fileset sim_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 13 20:56:47 2022...

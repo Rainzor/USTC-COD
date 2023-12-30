@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Apr 20 20:49:50 2022
+# Process ID: 46880
+# Current directory: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/data_mem2_synth_1
+# Command line: vivado.exe -log data_mem2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source data_mem2.tcl
+# Log file: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/data_mem2_synth_1/data_mem2.vds
+# Journal file: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/data_mem2_synth_1\vivado.jou
+#-----------------------------------------------------------
+source data_mem2.tcl -notrace

@@ -1,0 +1,64 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Instr_Mem_quick/sim/Instr_Mem_quick.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instr_Mem_quick
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Instr_Mem/sim/Instr_Mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instr_Mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Instr_Mem_select/sim/Instr_Mem_select.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instr_Mem_select
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/ID_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/imports/Lab5/pdu-v1.1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pdu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_s
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/EX_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/IF_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/MEM_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ME_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/WB_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WB_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/data_ext.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_ext
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_1
+INFO: [VRFC 10-2458] undeclared symbol we, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu_1.v:408]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/WB_reg1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WB_reg1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/control1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main
+INFO: [VRFC 10-2458] undeclared symbol io_dout, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/main.v:57]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/NPC_Generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NPC_Generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/BranchDecision.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BranchDecision
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/hazard_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Hazard_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/BranchPredict.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BranchPredict
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/BTB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BTB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/hazard_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Hazard_unit_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Data_Mem/sim/Data_Mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/ID_reg1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_reg1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/BHT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BHT
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/BranchPredict_btb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BranchPredict_btb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_for_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sim_1/imports/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_for_sort

@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat Mar 19 21:45:43 2022
+# Process ID: 23424
+# Current directory: D:/ComputerScience/cs_COD_Spring_2021/FLS
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19372 D:\ComputerScience\cs_COD_Spring_2021\FLS\FLS.xpr
+# Log file: D:/ComputerScience/cs_COD_Spring_2021/FLS/vivado.log
+# Journal file: D:/ComputerScience/cs_COD_Spring_2021/FLS\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ComputerScience/cs_COD_Spring_2021/FLS/FLS.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+file mkdir D:/ComputerScience/cs_COD_Spring_2021/FLS/FLS.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open D:/ComputerScience/cs_COD_Spring_2021/FLS/FLS.srcs/sim_1/new/testbench.v w ]
+add_files -fileset sim_1 D:/ComputerScience/cs_COD_Spring_2021/FLS/FLS.srcs/sim_1/new/testbench.v
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top testbench [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source testbench.tcl
+close_sim
+launch_simulation
+source testbench.tcl
+close_sim
+launch_simulation
+source testbench.tcl
+close_sim

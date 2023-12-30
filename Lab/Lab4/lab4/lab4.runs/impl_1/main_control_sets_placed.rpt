@@ -1,0 +1,214 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Dec 14 22:41:31 2022
+| Host         : Sky running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
+| Design       : main
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   136 |
+|    Minimum number of control sets                        |   136 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   639 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   136 |
+| >= 0 to < 4        |    92 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |    42 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              69 |           33 |
+| No           | No                    | Yes                    |             153 |           75 |
+| No           | Yes                   | No                     |              21 |           21 |
+| Yes          | No                    | No                     |            1024 |          627 |
+| Yes          | No                    | Yes                    |             142 |           66 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------+-----------------------------------------------------------------------------------------------+---------------------------------+------------------+----------------+
+|           Clock Signal           |                                         Enable Signal                                         |         Set/Reset Signal        | Slice Load Count | Bel Load Count |
++----------------------------------+-----------------------------------------------------------------------------------------------+---------------------------------+------------------+----------------+
+|  pdu/x_db_r_reg[14]_LDC_i_1_n_2  |                                                                                               | pdu/x_db_r_reg[14]_LDC_i_2_n_2  |                1 |              1 |
+|  clk_db_BUFG                     |                                                                                               | pdu/x_db_r_reg[13]_LDC_i_2_n_2  |                1 |              1 |
+|  pdu/btn_db_r_reg[1]_LDC_i_1_n_2 |                                                                                               | pdu/btn_db_r_reg[1]_LDC_i_2_n_2 |                1 |              1 |
+|  pdu/btn_db_r_reg[2]_LDC_i_1_n_2 |                                                                                               | pdu/btn_db_r_reg[2]_LDC_i_2_n_2 |                1 |              1 |
+|  pdu/btn_db_r_reg[3]_LDC_i_1_n_2 |                                                                                               | pdu/btn_db_r_reg[3]_LDC_i_2_n_2 |                1 |              1 |
+|  pdu/btn_db_r_reg[4]_LDC_i_1_n_2 |                                                                                               | pdu/btn_db_r_reg[4]_LDC_i_2_n_2 |                1 |              1 |
+|  pdu/btn_db_r_reg[0]_LDC_i_1_n_2 |                                                                                               | pdu/btn_db_r_reg[0]_LDC_i_2_n_2 |                1 |              1 |
+|  pdu/x_db_r_reg[15]_LDC_i_1_n_2  |                                                                                               | pdu/x_db_r_reg[15]_LDC_i_2_n_2  |                1 |              1 |
+|  pdu/x_db_r_reg[5]_LDC_i_1_n_2   |                                                                                               | pdu/x_db_r_reg[5]_LDC_i_2_n_2   |                1 |              1 |
+|  pdu/x_db_r_reg[11]_LDC_i_1_n_2  |                                                                                               | pdu/x_db_r_reg[11]_LDC_i_2_n_2  |                1 |              1 |
+|  pdu/x_db_r_reg[1]_LDC_i_1_n_2   |                                                                                               | pdu/x_db_r_reg[1]_LDC_i_2_n_2   |                1 |              1 |
+|  pdu/x_db_r_reg[12]_LDC_i_1_n_2  |                                                                                               | pdu/x_db_r_reg[12]_LDC_i_2_n_2  |                1 |              1 |
+|  pdu/x_db_r_reg[13]_LDC_i_1_n_2  |                                                                                               | pdu/x_db_r_reg[13]_LDC_i_2_n_2  |                1 |              1 |
+|  pdu/x_db_r_reg[2]_LDC_i_1_n_2   |                                                                                               | pdu/x_db_r_reg[2]_LDC_i_2_n_2   |                1 |              1 |
+|  pdu/x_db_r_reg[4]_LDC_i_1_n_2   |                                                                                               | pdu/x_db_r_reg[4]_LDC_i_2_n_2   |                1 |              1 |
+|  pdu/x_db_r_reg[0]_LDC_i_1_n_2   |                                                                                               | pdu/x_db_r_reg[0]_LDC_i_2_n_2   |                1 |              1 |
+|  pdu/x_db_r_reg[3]_LDC_i_1_n_2   |                                                                                               | pdu/x_db_r_reg[3]_LDC_i_2_n_2   |                1 |              1 |
+|  clk_db_BUFG                     |                                                                                               | pdu/x_db_r_reg[5]_LDC_i_2_n_2   |                1 |              1 |
+|  pdu/x_db_r_reg[10]_LDC_i_1_n_2  |                                                                                               | pdu/x_db_r_reg[10]_LDC_i_2_n_2  |                1 |              1 |
+|  pdu/x_db_r_reg[6]_LDC_i_1_n_2   |                                                                                               | pdu/x_db_r_reg[6]_LDC_i_2_n_2   |                1 |              1 |
+|  pdu/x_db_r_reg[9]_LDC_i_1_n_2   |                                                                                               | pdu/x_db_r_reg[9]_LDC_i_2_n_2   |                1 |              1 |
+|  pdu/x_db_r_reg[8]_LDC_i_1_n_2   |                                                                                               | pdu/x_db_r_reg[8]_LDC_i_2_n_2   |                1 |              1 |
+|  pdu/x_db_r_reg[7]_LDC_i_1_n_2   |                                                                                               | pdu/x_db_r_reg[7]_LDC_i_2_n_2   |                1 |              1 |
+|  clk_pdu                         |                                                                                               | pdu/btn_db_r_reg[1]_LDC_i_1_n_2 |                1 |              1 |
+|  clk_pdu                         |                                                                                               | pdu/btn_db_r_reg[1]_LDC_i_2_n_2 |                1 |              1 |
+|  clk_db_BUFG                     | pdu/cnt_btn_db_r_reg[4]                                                                       | pdu/btn_db_r_reg[0]_LDC_i_2_n_2 |                1 |              1 |
+|  clk_db_BUFG                     | pdu/cnt_btn_db_r_reg[4]                                                                       | pdu/btn_db_r_reg[0]_LDC_i_1_n_2 |                1 |              1 |
+|  clk_db_BUFG                     | pdu/cnt_btn_db_r_reg[4]                                                                       | pdu/btn_db_r_reg[4]_LDC_i_2_n_2 |                1 |              1 |
+|  clk_db_BUFG                     | pdu/cnt_btn_db_r_reg[4]                                                                       | pdu/btn_db_r_reg[4]_LDC_i_1_n_2 |                1 |              1 |
+|  clk_db_BUFG                     | pdu/cnt_btn_db_r_reg[4]                                                                       | pdu/btn_db_r_reg[2]_LDC_i_2_n_2 |                1 |              1 |
+|  clk_db_BUFG                     | pdu/cnt_btn_db_r_reg[4]                                                                       | pdu/btn_db_r_reg[3]_LDC_i_2_n_2 |                1 |              1 |
+|  clk_db_BUFG                     | pdu/cnt_btn_db_r_reg[4]                                                                       | pdu/btn_db_r_reg[3]_LDC_i_1_n_2 |                1 |              1 |
+|  clk_db_BUFG                     | pdu/cnt_btn_db_r_reg[4]                                                                       | pdu/btn_db_r_reg[2]_LDC_i_1_n_2 |                1 |              1 |
+|  clk_db_BUFG                     | pdu/cnt_btn_db_r_reg[4]                                                                       | pdu/btn_db_r_reg[1]_LDC_i_1_n_2 |                1 |              1 |
+|  clk_db_BUFG                     | pdu/cnt_btn_db_r_reg[4]                                                                       | pdu/btn_db_r_reg[1]_LDC_i_2_n_2 |                1 |              1 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[9]_LDC_i_2_n_2   |                1 |              1 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[6]_LDC_i_2_n_2   |                1 |              1 |
+|  clk_pdu                         |                                                                                               | pdu/btn_db_r_reg[2]_LDC_i_1_n_2 |                1 |              1 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[8]_LDC_i_2_n_2   |                1 |              1 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[7]_LDC_i_2_n_2   |                1 |              1 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[14]_LDC_i_2_n_2  |                1 |              1 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[5]_LDC_i_2_n_2   |                1 |              1 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[13]_LDC_i_2_n_2  |                1 |              1 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[3]_LDC_i_2_n_2   |                1 |              1 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[15]_LDC_i_2_n_2  |                1 |              1 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[11]_LDC_i_2_n_2  |                1 |              1 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[10]_LDC_i_2_n_2  |                1 |              1 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[12]_LDC_i_2_n_2  |                1 |              1 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[0]_LDC_i_2_n_2   |                1 |              1 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[4]_LDC_i_2_n_2   |                1 |              1 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[2]_LDC_i_2_n_2   |                1 |              1 |
+|  clk_db_BUFG                     |                                                                                               | pdu/x_db_r_reg[14]_LDC_i_2_n_2  |                1 |              1 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[1]_LDC_i_2_n_2   |                1 |              1 |
+|  clk_db_BUFG                     |                                                                                               | pdu/x_db_r_reg[9]_LDC_i_2_n_2   |                1 |              1 |
+|  clk_db_BUFG                     |                                                                                               | pdu/x_db_r_reg[6]_LDC_i_2_n_2   |                1 |              1 |
+|  clk_db_BUFG                     |                                                                                               | pdu/x_db_r_reg[8]_LDC_i_2_n_2   |                1 |              1 |
+|  clk_db_BUFG                     |                                                                                               | pdu/x_db_r_reg[7]_LDC_i_2_n_2   |                1 |              1 |
+|  clk_db_BUFG                     |                                                                                               | pdu/x_db_r_reg[1]_LDC_i_2_n_2   |                1 |              1 |
+|  clk_db_BUFG                     |                                                                                               | pdu/x_db_r_reg[2]_LDC_i_2_n_2   |                1 |              1 |
+|  clk_db_BUFG                     |                                                                                               | pdu/x_db_r_reg[4]_LDC_i_2_n_2   |                1 |              1 |
+|  clk_db_BUFG                     |                                                                                               | pdu/x_db_r_reg[0]_LDC_i_2_n_2   |                1 |              1 |
+|  clk_db_BUFG                     |                                                                                               | pdu/x_db_r_reg[12]_LDC_i_2_n_2  |                1 |              1 |
+|  clk_db_BUFG                     |                                                                                               | pdu/x_db_r_reg[10]_LDC_i_2_n_2  |                1 |              1 |
+|  clk_db_BUFG                     |                                                                                               | pdu/x_db_r_reg[11]_LDC_i_2_n_2  |                1 |              1 |
+|  clk_db_BUFG                     |                                                                                               | pdu/x_db_r_reg[15]_LDC_i_2_n_2  |                1 |              1 |
+|  clk_db_BUFG                     |                                                                                               | pdu/x_db_r_reg[3]_LDC_i_2_n_2   |                1 |              1 |
+|  clk_pdu                         |                                                                                               | pdu/btn_db_r_reg[3]_LDC_i_1_n_2 |                1 |              1 |
+|  clk_pdu                         |                                                                                               | pdu/btn_db_r_reg[3]_LDC_i_2_n_2 |                1 |              1 |
+|  clk_pdu                         |                                                                                               | pdu/btn_db_r_reg[2]_LDC_i_2_n_2 |                1 |              1 |
+|  clk_pdu                         |                                                                                               | pdu/btn_db_r_reg[4]_LDC_i_1_n_2 |                1 |              1 |
+|  clk_pdu                         |                                                                                               | pdu/btn_db_r_reg[4]_LDC_i_2_n_2 |                1 |              1 |
+|  clk_pdu                         |                                                                                               | pdu/btn_db_r_reg[0]_LDC_i_1_n_2 |                1 |              1 |
+|  clk_pdu                         |                                                                                               | pdu/btn_db_r_reg[0]_LDC_i_2_n_2 |                1 |              1 |
+| ~clk_pdu                         |                                                                                               | pdu/Q[0]                        |                1 |              1 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[2]_LDC_i_1_n_2   |                1 |              2 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[4]_LDC_i_1_n_2   |                1 |              2 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[0]_LDC_i_1_n_2   |                1 |              2 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[3]_LDC_i_1_n_2   |                1 |              2 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[14]_LDC_i_1_n_2  |                1 |              2 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[10]_LDC_i_1_n_2  |                1 |              2 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[6]_LDC_i_1_n_2   |                1 |              2 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[8]_LDC_i_1_n_2   |                1 |              2 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[7]_LDC_i_1_n_2   |                1 |              2 |
+|  cpu/AluOp_reg[2]_i_2_n_2        |                                                                                               |                                 |                2 |              2 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[12]_LDC_i_1_n_2  |                1 |              2 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[9]_LDC_i_1_n_2   |                1 |              2 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[15]_LDC_i_1_n_2  |                1 |              2 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[5]_LDC_i_1_n_2   |                1 |              2 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[11]_LDC_i_1_n_2  |                1 |              2 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[1]_LDC_i_1_n_2   |                1 |              2 |
+|  clk_db_BUFG                     | pdu/p_0_in_2                                                                                  | pdu/x_db_r_reg[13]_LDC_i_1_n_2  |                1 |              2 |
+|  cpu/Branch_reg[2]_i_2_n_2       |                                                                                               |                                 |                1 |              3 |
+|  clk_db_BUFG                     |                                                                                               | pdu/Q[0]                        |                3 |             11 |
+|  clk_pdu                         |                                                                                               | pdu/Q[0]                        |                8 |             15 |
+|  clk_IBUF_BUFG                   |                                                                                               | pdu/rstn_r[15]_i_1_n_2          |                4 |             16 |
+|  clk_pdu                         | pdu/chk_addr_r                                                                                | pdu/Q[0]                        |                4 |             20 |
+|  clk_IBUF_BUFG                   |                                                                                               | pdu/Q[0]                        |                5 |             20 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[27][31]_i_1_n_2                                                              |                                 |               16 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[4][31]_i_1_n_2                                                               |                                 |               19 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[3][31]_i_1_n_2                                                               |                                 |               21 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[5][31]_i_1_n_2                                                               |                                 |               19 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[29][31]_i_1_n_2                                                              |                                 |               24 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[22][31]_i_1_n_2                                                              |                                 |               18 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[20][31]_i_1_n_2                                                              |                                 |               16 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[26][31]_i_1_n_2                                                              |                                 |               18 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[25][31]_i_1_n_2                                                              |                                 |               15 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[31][31]_i_1_n_2                                                              |                                 |               26 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[10][31]_i_1_n_2                                                              |                                 |               16 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[13][31]_i_1_n_2                                                              |                                 |               20 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[17][31]_i_1_n_2                                                              |                                 |               19 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[16][31]_i_1_n_2                                                              |                                 |               17 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[12][31]_i_1_n_2                                                              |                                 |               15 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[15][31]_i_1_n_2                                                              |                                 |               20 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[19][31]_i_1_n_2                                                              |                                 |               17 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[18][31]_i_1_n_2                                                              |                                 |               16 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[14][31]_i_1_n_2                                                              |                                 |               22 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[11][31]_i_1_n_2                                                              |                                 |               17 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem                                                                              |                                 |               20 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[30][31]_i_1_n_2                                                              |                                 |               25 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[2][31]_i_1_n_2                                                               |                                 |               19 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[6][31]_i_1_n_2                                                               |                                 |               20 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[8][31]_i_1_n_2                                                               |                                 |               26 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[28][31]_i_1_n_2                                                              |                                 |               20 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[24][31]_i_1_n_2                                                              |                                 |               20 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[23][31]_i_1_n_2                                                              |                                 |               20 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[21][31]_i_1_n_2                                                              |                                 |               20 |             32 |
+|  clk_pdu                         | pdu/brk_addr_r_0                                                                              | pdu/Q[0]                        |                8 |             32 |
+|  clk_pdu                         | pdu/swx_data_r_1                                                                              |                                 |               17 |             32 |
+|  clk_pdu                         | pdu/tmp_r[31]_i_1_n_2                                                                         | pdu/Q[0]                        |               12 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[9][31]_i_1_n_2                                                               |                                 |               24 |             32 |
+|  clk_cpu_BUFG                    | cpu/Register/mem[7][31]_i_1_n_2                                                               |                                 |               25 |             32 |
+|  n_0_2364_BUFG                   |                                                                                               |                                 |               15 |             32 |
+|  n_1_2386_BUFG                   |                                                                                               |                                 |               15 |             32 |
+|  clk_cpu_BUFG                    |                                                                                               | pdu/Q[0]                        |               28 |             64 |
+|  clk_cpu_BUFG                    | cpu/data_mem/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_128_255_0_0_i_1_n_0 |                                 |               32 |            128 |
+|  clk_cpu_BUFG                    | cpu/data_mem/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_0_127_0_0_i_1_n_0   |                                 |               32 |            128 |
++----------------------------------+-----------------------------------------------------------------------------------------------+---------------------------------+------------------+----------------+
+
+

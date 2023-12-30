@@ -1,0 +1,53 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue May 24 23:37:40 2022
+# Process ID: 7924
+# Current directory: D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2516 D:\ComputerScience\cs_COD_Spring_2022\Lab5\lab5\lab5.xpr
+# Log file: D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/vivado.log
+# Journal file: D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.xpr
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run impl_1
+set_property -dict [list CONFIG.memory_type {rom}] [get_ips Instr_Mem]
+generate_target all [get_files  D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Instr_Mem/Instr_Mem.xci]
+catch { config_ip_cache -export [get_ips -all Instr_Mem] }
+export_ip_user_files -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Instr_Mem/Instr_Mem.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Instr_Mem/Instr_Mem.xci]
+export_simulation -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Instr_Mem/Instr_Mem.xci] -directory D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.ip_user_files/sim_scripts -ip_user_files_dir D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.ip_user_files -ipstatic_source_dir D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.cache/compile_simlib/modelsim} {questa=D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.cache/compile_simlib/questa} {riviera=D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.cache/compile_simlib/riviera} {activehdl=D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_manager
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+launch_simulation
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/testbench_behav.wcfg
+source test_for_sort.tcl
+relaunch_sim
+reset_run synth_1
+save_wave_config {D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/testbench_behav.wcfg}
+close_sim

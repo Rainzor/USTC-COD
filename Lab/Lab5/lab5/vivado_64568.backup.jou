@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue May 24 23:23:28 2022
+# Process ID: 64568
+# Current directory: D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent77120 D:\ComputerScience\cs_COD_Spring_2022\Lab5\lab5\lab5.xpr
+# Log file: D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/vivado.log
+# Journal file: D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.xpr
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1

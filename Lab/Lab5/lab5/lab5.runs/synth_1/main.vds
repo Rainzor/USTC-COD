@@ -1,0 +1,902 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed May 25 10:25:50 2022
+# Process ID: 9188
+# Current directory: D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.runs/synth_1
+# Command line: vivado.exe -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+# Log file: D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.runs/synth_1/main.vds
+# Journal file: D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source main.tcl -notrace
+Command: synth_design -top main -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5920 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 824.199 ; gain = 233.750
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'main' [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/main.v:4]
+INFO: [Synth 8-6157] synthesizing module 'pdu' [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/imports/Lab5/pdu-v1.1.v:1]
+	Parameter STOP bound to: 2'b00 
+	Parameter STEP bound to: 2'b01 
+	Parameter RUN bound to: 2'b10 
+INFO: [Synth 8-226] default block is never used [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/imports/Lab5/pdu-v1.1.v:408]
+INFO: [Synth 8-226] default block is never used [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/imports/Lab5/pdu-v1.1.v:447]
+WARNING: [Synth 8-5788] Register x_db_r_reg in module pdu is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/imports/Lab5/pdu-v1.1.v:133]
+WARNING: [Synth 8-5788] Register x_db_1r_reg in module pdu is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/imports/Lab5/pdu-v1.1.v:134]
+WARNING: [Synth 8-5788] Register btn_db_r_reg in module pdu is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/imports/Lab5/pdu-v1.1.v:166]
+WARNING: [Synth 8-5788] Register btn_db_1r_reg in module pdu is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/imports/Lab5/pdu-v1.1.v:90]
+WARNING: [Synth 8-5788] Register swx_data_r_reg in module pdu is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/imports/Lab5/pdu-v1.1.v:356]
+INFO: [Synth 8-6155] done synthesizing module 'pdu' (1#1) [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/imports/Lab5/pdu-v1.1.v:1]
+INFO: [Synth 8-6157] synthesizing module 'cpu_s' [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:1]
+	Parameter RTYPE bound to: 3'b000 
+	Parameter ITYPE bound to: 3'b001 
+	Parameter STYPE bound to: 3'b010 
+	Parameter BTYPE bound to: 3'b011 
+	Parameter UTYPE bound to: 3'b100 
+	Parameter JTYPE bound to: 3'b101 
+	Parameter NOBRANCH bound to: 3'b000 
+	Parameter BEQ bound to: 3'b001 
+	Parameter BNE bound to: 3'b010 
+	Parameter BLT bound to: 3'b011 
+	Parameter BLTU bound to: 3'b100 
+	Parameter BGE bound to: 3'b101 
+	Parameter BGEU bound to: 3'b110 
+	Parameter ADD bound to: 4'b0000 
+	Parameter SUB bound to: 4'b0001 
+	Parameter AND bound to: 4'b0010 
+	Parameter OR bound to: 4'b0011 
+	Parameter XOR bound to: 4'b0100 
+	Parameter SLL bound to: 4'b0101 
+	Parameter SRL bound to: 4'b0110 
+	Parameter LUI bound to: 4'b0111 
+	Parameter NOREGWRITE bound to: 3'b000 
+	Parameter LB bound to: 3'b001 
+	Parameter LH bound to: 3'b010 
+	Parameter LW bound to: 3'b011 
+	Parameter LBU bound to: 3'b100 
+	Parameter LHU bound to: 3'b101 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:130]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:128]
+INFO: [Synth 8-6157] synthesizing module 'Hazard_unit' [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/hazard_unit.v:1]
+	Parameter FORWARD_EX bound to: 2'b10 
+	Parameter FORWARD_ME bound to: 2'b01 
+	Parameter NOFORWARD bound to: 2'b00 
+INFO: [Synth 8-6155] done synthesizing module 'Hazard_unit' (2#1) [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/hazard_unit.v:1]
+WARNING: [Synth 8-7023] instance 'Hazard_unit' of module 'Hazard_unit' has 28 connections declared, but only 27 given [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:173]
+INFO: [Synth 8-6157] synthesizing module 'IF_reg' [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/IF_reg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IF_reg' (3#1) [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/IF_reg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'NPC_Generator' [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/NPC_Generator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'NPC_Generator' (4#1) [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/NPC_Generator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Instr_Mem' [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.runs/synth_1/.Xil/Vivado-9188-Sky/realtime/Instr_Mem_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Instr_Mem' (5#1) [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.runs/synth_1/.Xil/Vivado-9188-Sky/realtime/Instr_Mem_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ID_reg' [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/ID_reg.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ID_reg' (6#1) [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/ID_reg.v:3]
+INFO: [Synth 8-6157] synthesizing module 'reg_file' [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/reg_file.v:2]
+	Parameter AW bound to: 5 - type: integer 
+	Parameter DW bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'reg_file' (7#1) [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/reg_file.v:2]
+INFO: [Synth 8-6157] synthesizing module 'control' [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/control_unit.v:1]
+	Parameter RTYPE bound to: 3'b000 
+	Parameter ITYPE bound to: 3'b001 
+	Parameter STYPE bound to: 3'b010 
+	Parameter BTYPE bound to: 3'b011 
+	Parameter UTYPE bound to: 3'b100 
+	Parameter JTYPE bound to: 3'b101 
+	Parameter NOBRANCH bound to: 3'b000 
+	Parameter BEQ bound to: 3'b001 
+	Parameter BNE bound to: 3'b010 
+	Parameter BLT bound to: 3'b011 
+	Parameter BLTU bound to: 3'b100 
+	Parameter BGE bound to: 3'b101 
+	Parameter BGEU bound to: 3'b110 
+	Parameter ADD bound to: 4'b0000 
+	Parameter SUB bound to: 4'b0001 
+	Parameter AND bound to: 4'b0010 
+	Parameter OR bound to: 4'b0011 
+	Parameter XOR bound to: 4'b0100 
+	Parameter SLL bound to: 4'b0101 
+	Parameter SRL bound to: 4'b0110 
+	Parameter LUI bound to: 4'b0111 
+	Parameter NOREGWRITE bound to: 3'b000 
+	Parameter LB bound to: 3'b001 
+	Parameter LH bound to: 3'b010 
+	Parameter LW bound to: 3'b011 
+	Parameter LBU bound to: 3'b100 
+	Parameter LHU bound to: 3'b101 
+	Parameter OP_R bound to: 7'b0110011 
+	Parameter OP_LOAD bound to: 7'b0000011 
+	Parameter OP_I bound to: 7'b0010011 
+	Parameter OP_STORE bound to: 7'b0100011 
+	Parameter OP_JAL bound to: 7'b1101111 
+	Parameter OP_JALR bound to: 7'b1100111 
+	Parameter OP_BRANCH bound to: 7'b1100011 
+	Parameter OP_AUIPC bound to: 7'b0010111 
+	Parameter OP_LUI bound to: 7'b0110111 
+INFO: [Synth 8-6155] done synthesizing module 'control' (8#1) [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/control_unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'EX_reg' [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/EX_reg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'EX_reg' (9#1) [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/EX_reg.v:1]
+WARNING: [Synth 8-689] width (4) of port connection 'alu_f_EX' does not match port width (5) of module 'EX_reg' [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:378]
+WARNING: [Synth 8-7023] instance 'EX_reg' of module 'EX_reg' has 43 connections declared, but only 42 given [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:340]
+INFO: [Synth 8-6157] synthesizing module 'BranchDecision' [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/BranchDecision.v:3]
+	Parameter NOBRANCH bound to: 3'b000 
+	Parameter BEQ bound to: 3'b001 
+	Parameter BNE bound to: 3'b010 
+	Parameter BLT bound to: 3'b011 
+	Parameter BLTU bound to: 3'b100 
+	Parameter BGE bound to: 3'b101 
+	Parameter BGEU bound to: 3'b110 
+INFO: [Synth 8-6155] done synthesizing module 'BranchDecision' (10#1) [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/BranchDecision.v:3]
+INFO: [Synth 8-6157] synthesizing module 'alu' [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/alu.v:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter ADD bound to: 4'b0000 
+	Parameter SUB bound to: 4'b0001 
+	Parameter AND bound to: 4'b0010 
+	Parameter OR bound to: 4'b0011 
+	Parameter XOR bound to: 4'b0100 
+	Parameter SLL bound to: 4'b0101 
+	Parameter SRL bound to: 4'b0110 
+	Parameter LUI bound to: 4'b0111 
+INFO: [Synth 8-6155] done synthesizing module 'alu' (11#1) [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/alu.v:1]
+WARNING: [Synth 8-7023] instance 'alu' of module 'alu' has 5 connections declared, but only 4 given [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:401]
+INFO: [Synth 8-6157] synthesizing module 'ME_reg' [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/MEM_reg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ME_reg' (12#1) [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/MEM_reg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'WB_reg' [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/WB_reg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'DataMem' [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:3]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:20]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:20]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:20]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:20]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:20]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:20]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:20]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:20]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:20]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:20]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:20]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:20]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:20]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:20]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:20]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:20]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'DataMem' (13#1) [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v:3]
+INFO: [Synth 8-6157] synthesizing module 'data_ext' [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/data_ext.v:1]
+	Parameter NOREGWRITE bound to: 3'b000 
+	Parameter LB bound to: 3'b001 
+	Parameter LH bound to: 3'b010 
+	Parameter LW bound to: 3'b011 
+	Parameter LBU bound to: 3'b100 
+	Parameter LHU bound to: 3'b101 
+INFO: [Synth 8-6155] done synthesizing module 'data_ext' (14#1) [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/data_ext.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'WB_reg' (15#1) [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/WB_reg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_s' (16#1) [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:1]
+WARNING: [Synth 8-689] width (1) of port connection 'io_dout' does not match port width (32) of module 'cpu_s' [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/main.v:77]
+INFO: [Synth 8-6155] done synthesizing module 'main' (17#1) [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/main.v:4]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[31]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[30]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[29]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[28]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[27]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[26]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[25]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[24]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[23]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[22]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[21]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[20]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[19]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[18]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[17]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[16]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[31]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[30]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[29]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[28]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[27]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[26]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[25]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[24]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[23]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[22]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[21]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[20]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[19]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[18]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[17]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[16]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[15]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[14]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[13]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[12]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[11]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[10]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[1]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[0]
+WARNING: [Synth 8-3331] design control has unconnected port instr[31]
+WARNING: [Synth 8-3331] design control has unconnected port instr[29]
+WARNING: [Synth 8-3331] design control has unconnected port instr[28]
+WARNING: [Synth 8-3331] design control has unconnected port instr[27]
+WARNING: [Synth 8-3331] design control has unconnected port instr[26]
+WARNING: [Synth 8-3331] design control has unconnected port instr[25]
+WARNING: [Synth 8-3331] design control has unconnected port instr[24]
+WARNING: [Synth 8-3331] design control has unconnected port instr[23]
+WARNING: [Synth 8-3331] design control has unconnected port instr[22]
+WARNING: [Synth 8-3331] design control has unconnected port instr[21]
+WARNING: [Synth 8-3331] design control has unconnected port instr[20]
+WARNING: [Synth 8-3331] design control has unconnected port instr[19]
+WARNING: [Synth 8-3331] design control has unconnected port instr[18]
+WARNING: [Synth 8-3331] design control has unconnected port instr[17]
+WARNING: [Synth 8-3331] design control has unconnected port instr[16]
+WARNING: [Synth 8-3331] design control has unconnected port instr[15]
+WARNING: [Synth 8-3331] design control has unconnected port instr[11]
+WARNING: [Synth 8-3331] design control has unconnected port instr[10]
+WARNING: [Synth 8-3331] design control has unconnected port instr[9]
+WARNING: [Synth 8-3331] design control has unconnected port instr[8]
+WARNING: [Synth 8-3331] design control has unconnected port instr[7]
+WARNING: [Synth 8-3331] design Hazard_unit has unconnected port jal_EX
+WARNING: [Synth 8-3331] design cpu_s has unconnected port chk_addr[15]
+WARNING: [Synth 8-3331] design cpu_s has unconnected port chk_addr[14]
+WARNING: [Synth 8-3331] design cpu_s has unconnected port chk_addr[11]
+WARNING: [Synth 8-3331] design cpu_s has unconnected port chk_addr[10]
+WARNING: [Synth 8-3331] design cpu_s has unconnected port chk_addr[9]
+WARNING: [Synth 8-3331] design cpu_s has unconnected port chk_addr[8]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 899.211 ; gain = 308.762
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 899.211 ; gain = 308.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 899.211 ; gain = 308.762
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 899.211 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Instr_Mem/Instr_Mem/Instr_Mem_in_context.xdc] for cell 'cpu/InstrMem'
+Finished Parsing XDC File [d:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Instr_Mem/Instr_Mem/Instr_Mem_in_context.xdc] for cell 'cpu/InstrMem'
+Parsing XDC File [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/constrs_1/imports/Lab简介/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/constrs_1/imports/Lab简介/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/constrs_1/imports/Lab简介/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1016.223 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1016.223 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1016.223 ; gain = 425.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1016.223 ; gain = 425.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for cpu/InstrMem. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1016.223 ; gain = 425.773
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'cs_reg' in module 'pdu'
+INFO: [Synth 8-5546] ROM "x_hd_t" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "mem_write_ID" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5587] ROM size for "imm_type" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/alu.v:21]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    STOP |                              001 |                               00
+                    STEP |                              010 |                               01
+                     RUN |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cs_reg' using encoding 'one-hot' in module 'pdu'
+WARNING: [Synth 8-327] inferring latch for variable 'data_out_reg' [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/data_ext.v:24]
+WARNING: [Synth 8-327] inferring latch for variable 'chk_data_reg' [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:131]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1016.223 ; gain = 425.773
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input     16 Bit         XORs := 2     
+	   2 Input      5 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 55    
+	               16 Bit    Registers := 5     
+	                5 Bit    Registers := 10    
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 17    
++---RAMs : 
+	               8K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 27    
+	   4 Input     32 Bit        Muxes := 2     
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	  17 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   4 Input      4 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 4     
+	   5 Input      3 Bit        Muxes := 1     
+	  10 Input      3 Bit        Muxes := 3     
+	   6 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 7     
+	   3 Input      2 Bit        Muxes := 2     
+	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 51    
+	   3 Input      1 Bit        Muxes := 2     
+	  22 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module pdu 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
++---XORs : 
+	   2 Input     16 Bit         XORs := 2     
+	   2 Input      5 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               16 Bit    Registers := 5     
+	                5 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	  17 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+	   3 Input      1 Bit        Muxes := 2     
+Module Hazard_unit 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 4     
+Module IF_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module NPC_Generator 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+Module ID_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module reg_file 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 32    
+Module control 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	  10 Input      3 Bit        Muxes := 3     
+	   6 Input      3 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module EX_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 6     
+	                5 Bit    Registers := 4     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
+Module alu 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   8 Input     32 Bit        Muxes := 1     
+Module ME_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+Module DataMem 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
++---RAMs : 
+	               8K Bit         RAMs := 1     
+Module WB_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module cpu_s 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 9     
+	   4 Input     32 Bit        Muxes := 1     
+	  22 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5587] ROM size for "imm_type" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5544] ROM "pdu/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "pdu/x_hd_t" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[31]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[30]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[29]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[28]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[27]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[26]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[25]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[24]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[23]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[22]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[21]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[20]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[19]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[18]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[17]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port addr[16]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[31]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[30]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[29]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[28]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[27]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[26]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[25]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[24]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[23]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[22]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[21]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[20]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[19]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[18]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[17]
+WARNING: [Synth 8-3331] design WB_reg has unconnected port dpra[16]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/WB_reg/stall_ff_reg)
+INFO: [Synth 8-3886] merging instance 'cpu/EX_reg/mem_write_EX_reg[2]' (FDRE) to 'cpu/EX_reg/mem_write_EX_reg[3]'
+INFO: [Synth 8-3886] merging instance 'cpu/EX_reg/rd_EX_reg[3]' (FDRE) to 'cpu/EX_reg/IR_EX_reg[10]'
+INFO: [Synth 8-3886] merging instance 'cpu/EX_reg/rd_EX_reg[4]' (FDRE) to 'cpu/EX_reg/IR_EX_reg[11]'
+INFO: [Synth 8-3886] merging instance 'cpu/EX_reg/rd_EX_reg[0]' (FDRE) to 'cpu/EX_reg/IR_EX_reg[7]'
+INFO: [Synth 8-3886] merging instance 'cpu/EX_reg/rd_EX_reg[1]' (FDRE) to 'cpu/EX_reg/IR_EX_reg[8]'
+INFO: [Synth 8-3886] merging instance 'cpu/EX_reg/rd_EX_reg[2]' (FDRE) to 'cpu/EX_reg/IR_EX_reg[9]'
+INFO: [Synth 8-3886] merging instance 'cpu/EX_reg/IR_EX_reg[24]' (FDRE) to 'cpu/EX_reg/rs2_EX_reg[4]'
+INFO: [Synth 8-3886] merging instance 'cpu/EX_reg/IR_EX_reg[20]' (FDRE) to 'cpu/EX_reg/rs2_EX_reg[0]'
+INFO: [Synth 8-3886] merging instance 'cpu/EX_reg/IR_EX_reg[16]' (FDRE) to 'cpu/EX_reg/rs1_EX_reg[1]'
+INFO: [Synth 8-3886] merging instance 'cpu/ME_reg/IR_ME_reg[8]' (FDRE) to 'cpu/ME_reg/rd_ME_reg[1]'
+INFO: [Synth 8-3886] merging instance 'cpu/EX_reg/IR_EX_reg[21]' (FDRE) to 'cpu/EX_reg/rs2_EX_reg[1]'
+INFO: [Synth 8-3886] merging instance 'cpu/EX_reg/IR_EX_reg[17]' (FDRE) to 'cpu/EX_reg/rs1_EX_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cpu/ME_reg/IR_ME_reg[9]' (FDRE) to 'cpu/ME_reg/rd_ME_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cpu/EX_reg/IR_EX_reg[22]' (FDRE) to 'cpu/EX_reg/rs2_EX_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cpu/EX_reg/IR_EX_reg[18]' (FDRE) to 'cpu/EX_reg/rs1_EX_reg[3]'
+INFO: [Synth 8-3886] merging instance 'cpu/ME_reg/IR_ME_reg[10]' (FDRE) to 'cpu/ME_reg/rd_ME_reg[3]'
+INFO: [Synth 8-3886] merging instance 'cpu/EX_reg/IR_EX_reg[23]' (FDRE) to 'cpu/EX_reg/rs2_EX_reg[3]'
+INFO: [Synth 8-3886] merging instance 'cpu/EX_reg/IR_EX_reg[19]' (FDRE) to 'cpu/EX_reg/rs1_EX_reg[4]'
+INFO: [Synth 8-3886] merging instance 'cpu/EX_reg/IR_EX_reg[15]' (FDRE) to 'cpu/EX_reg/rs1_EX_reg[0]'
+INFO: [Synth 8-3886] merging instance 'cpu/ME_reg/IR_ME_reg[11]' (FDRE) to 'cpu/ME_reg/rd_ME_reg[4]'
+INFO: [Synth 8-3886] merging instance 'cpu/ME_reg/IR_ME_reg[7]' (FDRE) to 'cpu/ME_reg/rd_ME_reg[0]'
+INFO: [Synth 8-3886] merging instance 'cpu/EX_reg/alu_f_EX_reg[4]' (FDRE) to 'cpu/EX_reg/alu_f_EX_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/\EX_reg/alu_f_EX_reg[3] )
+INFO: [Synth 8-3886] merging instance 'cpu/ME_reg/mem_write_ME_reg[2]' (FDRE) to 'cpu/ME_reg/mem_write_ME_reg[3]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[28]' (FDPE) to 'pdu/seg_data_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[24]' (FDCE) to 'pdu/seg_data_r_reg[1]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[20]' (FDPE) to 'pdu/seg_data_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[16]' (FDCE) to 'pdu/seg_data_r_reg[1]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[12]' (FDPE) to 'pdu/seg_data_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[8]' (FDCE) to 'pdu/seg_data_r_reg[1]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[4]' (FDPE) to 'pdu/seg_data_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[29]' (FDCE) to 'pdu/seg_data_r_reg[1]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[25]' (FDPE) to 'pdu/seg_data_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[21]' (FDPE) to 'pdu/seg_data_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[17]' (FDCE) to 'pdu/seg_data_r_reg[1]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[13]' (FDCE) to 'pdu/seg_data_r_reg[1]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[9]' (FDPE) to 'pdu/seg_data_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[5]' (FDPE) to 'pdu/seg_data_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[1]' (FDCE) to 'pdu/seg_data_r_reg[2]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[30]' (FDCE) to 'pdu/seg_data_r_reg[2]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[26]' (FDCE) to 'pdu/seg_data_r_reg[2]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[22]' (FDCE) to 'pdu/seg_data_r_reg[2]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[18]' (FDPE) to 'pdu/seg_data_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[14]' (FDPE) to 'pdu/seg_data_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[10]' (FDPE) to 'pdu/seg_data_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[6]' (FDPE) to 'pdu/seg_data_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[2]' (FDCE) to 'pdu/seg_data_r_reg[7]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[31]' (FDCE) to 'pdu/seg_data_r_reg[7]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[27]' (FDCE) to 'pdu/seg_data_r_reg[7]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[23]' (FDCE) to 'pdu/seg_data_r_reg[7]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[19]' (FDCE) to 'pdu/seg_data_r_reg[7]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[15]' (FDCE) to 'pdu/seg_data_r_reg[7]'
+INFO: [Synth 8-3886] merging instance 'pdu/seg_data_r_reg[11]' (FDCE) to 'pdu/seg_data_r_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pdu/seg_data_r_reg[7] )
+INFO: [Synth 8-3886] merging instance 'pdu/led_data_r_reg[1]' (FDPE) to 'pdu/led_data_r_reg[2]'
+INFO: [Synth 8-3886] merging instance 'pdu/led_data_r_reg[2]' (FDPE) to 'pdu/led_data_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'pdu/led_data_r_reg[3]' (FDPE) to 'pdu/led_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'pdu/led_data_r_reg[4]' (FDPE) to 'pdu/led_data_r_reg[5]'
+INFO: [Synth 8-3886] merging instance 'pdu/led_data_r_reg[5]' (FDPE) to 'pdu/led_data_r_reg[6]'
+INFO: [Synth 8-3886] merging instance 'pdu/led_data_r_reg[6]' (FDPE) to 'pdu/led_data_r_reg[7]'
+INFO: [Synth 8-3886] merging instance 'pdu/led_data_r_reg[7]' (FDPE) to 'pdu/led_data_r_reg[8]'
+INFO: [Synth 8-3886] merging instance 'pdu/led_data_r_reg[8]' (FDPE) to 'pdu/led_data_r_reg[9]'
+INFO: [Synth 8-3886] merging instance 'pdu/led_data_r_reg[9]' (FDPE) to 'pdu/led_data_r_reg[10]'
+INFO: [Synth 8-3886] merging instance 'pdu/led_data_r_reg[10]' (FDPE) to 'pdu/led_data_r_reg[11]'
+INFO: [Synth 8-3886] merging instance 'pdu/led_data_r_reg[11]' (FDPE) to 'pdu/led_data_r_reg[12]'
+INFO: [Synth 8-3886] merging instance 'pdu/led_data_r_reg[12]' (FDPE) to 'pdu/led_data_r_reg[13]'
+INFO: [Synth 8-3886] merging instance 'pdu/led_data_r_reg[13]' (FDPE) to 'pdu/led_data_r_reg[14]'
+INFO: [Synth 8-3886] merging instance 'pdu/led_data_r_reg[14]' (FDPE) to 'pdu/led_data_r_reg[15]'
+INFO: [Synth 8-3886] merging instance 'cpu/WB_reg/IR_WB_reg[9]' (FDRE) to 'cpu/WB_reg/rd_WB_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cpu/WB_reg/IR_WB_reg[8]' (FDRE) to 'cpu/WB_reg/rd_WB_reg[1]'
+INFO: [Synth 8-3886] merging instance 'cpu/WB_reg/IR_WB_reg[10]' (FDRE) to 'cpu/WB_reg/rd_WB_reg[3]'
+INFO: [Synth 8-3886] merging instance 'cpu/WB_reg/IR_WB_reg[11]' (FDRE) to 'cpu/WB_reg/rd_WB_reg[4]'
+INFO: [Synth 8-3886] merging instance 'cpu/WB_reg/IR_WB_reg[7]' (FDRE) to 'cpu/WB_reg/rd_WB_reg[0]'
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[31]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[30]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[29]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[28]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[27]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[26]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[25]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[24]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[23]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[22]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[21]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[20]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[19]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[18]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[17]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[16]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[15]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[14]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[13]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[12]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[11]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[10]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[9]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[8]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[7]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[6]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[5]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[4]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[3]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[2]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[1]) is unused and will be removed from module WB_reg.
+WARNING: [Synth 8-3332] Sequential element (data_ext/data_out_reg[0]) is unused and will be removed from module WB_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1016.223 ; gain = 425.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping	Report (see note below)
++------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object           | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|cpu/WB_reg  | DataMem/data_ram_reg | 256 x 32(READ_FIRST)   | W | R | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
++------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1016.223 ; gain = 425.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 1055.977 ; gain = 465.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object           | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|cpu/WB_reg  | DataMem/data_ram_reg | 256 x 32(READ_FIRST)   | W | R | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
++------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7053] The timing for the instance cpu/WB_reg/DataMem/data_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance cpu/WB_reg/DataMem/data_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:51 . Memory (MB): peak = 1113.223 ; gain = 522.773
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 1117.898 ; gain = 527.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 1117.898 ; gain = 527.449
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 1117.898 ; gain = 527.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 1117.898 ; gain = 527.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:55 . Memory (MB): peak = 1117.938 ; gain = 527.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:55 . Memory (MB): peak = 1117.938 ; gain = 527.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |Instr_Mem     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |Instr_Mem |     1|
+|2     |BUFG      |     5|
+|3     |CARRY4    |    74|
+|4     |LUT1      |     6|
+|5     |LUT2      |   150|
+|6     |LUT3      |   285|
+|7     |LUT4      |   238|
+|8     |LUT5      |   356|
+|9     |LUT6      |  1710|
+|10    |MUXF7     |   388|
+|11    |MUXF8     |   192|
+|12    |RAMB36E1  |     1|
+|13    |FDCE      |  1223|
+|14    |FDPE      |    64|
+|15    |FDRE      |   579|
+|16    |LD        |    32|
+|17    |LDC       |    21|
+|18    |IBUF      |    23|
+|19    |OBUF      |    35|
++------+----------+------+
+
+Report Instance Areas: 
++------+------------------+--------------+------+
+|      |Instance          |Module        |Cells |
++------+------------------+--------------+------+
+|1     |top               |              |  5414|
+|2     |  cpu             |cpu_s         |  4512|
+|3     |    EX_reg        |EX_reg        |   995|
+|4     |    ID_reg        |ID_reg        |   297|
+|5     |    IF_reg        |IF_reg        |    41|
+|6     |    ME_reg        |ME_reg        |   363|
+|7     |    NPC_Generator |NPC_Generator |    64|
+|8     |    WB_reg        |WB_reg        |   288|
+|9     |      DataMem     |DataMem       |    13|
+|10    |    register_file |reg_file      |  2400|
+|11    |  pdu             |pdu           |   839|
++------+------------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:55 . Memory (MB): peak = 1117.938 ; gain = 527.488
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 102 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:00:53 . Memory (MB): peak = 1117.938 ; gain = 410.477
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:55 . Memory (MB): peak = 1117.938 ; gain = 527.488
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 1129.996 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 708 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1129.996 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 53 instances were transformed.
+  LD => LDCE: 32 instances
+  LDC => LDCE: 21 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+136 Infos, 193 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 1129.996 ; gain = 828.926
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1129.996 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.runs/synth_1/main.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed May 25 10:26:57 2022...

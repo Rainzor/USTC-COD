@@ -1,0 +1,545 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Apr 24 09:56:27 2022
+# Process ID: 4588
+# Current directory: D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18048 D:\ComputerScience\cs_COD_Spring_2022\Lab5\lab5\lab5.xpr
+# Log file: D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/vivado.log
+# Journal file: D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/ComputerScience/CodeApp/Vivado/2019.2/data/ip'.
+set_property -dict [list CONFIG.memory_type {rom}] [get_ips Instr_Mem]
+set_property -dict [list CONFIG.data_width {32}] [get_ips Instr_Mem]
+generate_target all [get_files  D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Instr_Mem/Instr_Mem.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'Instr_Mem'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'Instr_Mem'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'Instr_Mem'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'Instr_Mem'...
+catch { config_ip_cache -export [get_ips -all Instr_Mem] }
+export_ip_user_files -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Instr_Mem/Instr_Mem.xci] -no_script -sync -force -quiet
+reset_run Instr_Mem_synth_1
+launch_runs -jobs 8 Instr_Mem_synth_1
+[Sun Apr 24 09:57:09 2022] Launched Instr_Mem_synth_1...
+Run output will be captured here: D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.runs/Instr_Mem_synth_1/runme.log
+export_simulation -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Instr_Mem/Instr_Mem.xci] -directory D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.ip_user_files/sim_scripts -ip_user_files_dir D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.ip_user_files -ipstatic_source_dir D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.cache/compile_simlib/modelsim} {questa=D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.cache/compile_simlib/questa} {riviera=D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.cache/compile_simlib/riviera} {activehdl=D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+file mkdir D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sim_1/new/testbench.v w ]
+add_files -fileset sim_1 D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sim_1/new/testbench.v
+set_property top testbench [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/ComputerScience/CodeApp/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/Data_Mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/testIns_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/Instr_Mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/testIns_text.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Instr_Mem/sim/Instr_Mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instr_Mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Data_Mem/sim/Data_Mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/ID_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/imports/Lab5/pdu-v1.1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pdu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_s
+INFO: [VRFC 10-2458] undeclared symbol pc_ID, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:97]
+INFO: [VRFC 10-2458] undeclared symbol instr_ID, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:99]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/EX_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/IF_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/MEM_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ME_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/WB_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WB_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 74e3188a75c1486d923af539ec70095a --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/ComputerScience/CodeApp/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 74e3188a75c1486d923af539ec70095a --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Apr 24 11:13:04 2022...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 50 ns : File "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sim_1/new/testbench.v" Line 39
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 867.707 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/ComputerScience/CodeApp/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/Data_Mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/testIns_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/Instr_Mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/testIns_text.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Instr_Mem/sim/Instr_Mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instr_Mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Data_Mem/sim/Data_Mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/ID_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/imports/Lab5/pdu-v1.1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pdu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_s
+INFO: [VRFC 10-2458] undeclared symbol pc_ID, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:96]
+INFO: [VRFC 10-2458] undeclared symbol instr_ID, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:98]
+INFO: [VRFC 10-2458] undeclared symbol reg_write_WB, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:106]
+INFO: [VRFC 10-2458] undeclared symbol reg_write_data, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:110]
+INFO: [VRFC 10-2458] undeclared symbol reg_out1_ID, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:111]
+INFO: [VRFC 10-2458] undeclared symbol reg_out2_ID, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:112]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/EX_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/IF_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/MEM_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ME_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/WB_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WB_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 74e3188a75c1486d923af539ec70095a --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/ComputerScience/CodeApp/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 74e3188a75c1486d923af539ec70095a --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 50 ns : File "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sim_1/new/testbench.v" Line 39
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 874.734 ; gain = 0.000
+save_wave_config {D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/testbench_behav.wcfg}
+add_files -fileset sim_1 -norecurse D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/testbench_behav.wcfg
+set_property xsim.view D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/testbench_behav.wcfg [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/ComputerScience/CodeApp/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/Data_Mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/testIns_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/Instr_Mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/testIns_text.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Instr_Mem/sim/Instr_Mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instr_Mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Data_Mem/sim/Data_Mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/ID_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/imports/Lab5/pdu-v1.1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pdu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_s
+INFO: [VRFC 10-2458] undeclared symbol pc_ID, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:96]
+INFO: [VRFC 10-2458] undeclared symbol instr_ID, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:98]
+INFO: [VRFC 10-2458] undeclared symbol reg_write_WB, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:106]
+INFO: [VRFC 10-2458] undeclared symbol reg_write_data, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:110]
+INFO: [VRFC 10-2458] undeclared symbol reg_out1_ID, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:111]
+INFO: [VRFC 10-2458] undeclared symbol reg_out2_ID, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:112]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/EX_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/IF_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/MEM_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ME_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/WB_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WB_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 74e3188a75c1486d923af539ec70095a --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/ComputerScience/CodeApp/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 74e3188a75c1486d923af539ec70095a --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -view {D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/testbench_behav.wcfg
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 50 ns : File "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sim_1/new/testbench.v" Line 39
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 874.734 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/ComputerScience/CodeApp/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/Data_Mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/testIns_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/Instr_Mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/testIns_text.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Instr_Mem/sim/Instr_Mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instr_Mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Data_Mem/sim/Data_Mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/ID_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/imports/Lab5/pdu-v1.1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pdu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_s
+INFO: [VRFC 10-2458] undeclared symbol pc_ID, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:96]
+INFO: [VRFC 10-2458] undeclared symbol instr_ID, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:98]
+INFO: [VRFC 10-2458] undeclared symbol reg_write_WB, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:106]
+INFO: [VRFC 10-2458] undeclared symbol reg_write_data, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:110]
+INFO: [VRFC 10-2458] undeclared symbol reg_out1_ID, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:111]
+INFO: [VRFC 10-2458] undeclared symbol reg_out2_ID, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:112]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/EX_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/IF_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/MEM_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ME_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/WB_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WB_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 74e3188a75c1486d923af539ec70095a --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/ComputerScience/CodeApp/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 74e3188a75c1486d923af539ec70095a --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -view {D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/testbench_behav.wcfg
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 50 ns : File "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sim_1/new/testbench.v" Line 39
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 874.734 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/ComputerScience/CodeApp/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/Data_Mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/testIns_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/Instr_Mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/testIns_text.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Instr_Mem/sim/Instr_Mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instr_Mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/ip/Data_Mem/sim/Data_Mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/ID_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/imports/Lab5/pdu-v1.1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pdu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_s
+INFO: [VRFC 10-2458] undeclared symbol pc_ID, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:96]
+INFO: [VRFC 10-2458] undeclared symbol instr_ID, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:98]
+INFO: [VRFC 10-2458] undeclared symbol reg_write_WB, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:106]
+INFO: [VRFC 10-2458] undeclared symbol reg_write_data, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:110]
+INFO: [VRFC 10-2458] undeclared symbol reg_out1_ID, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:111]
+INFO: [VRFC 10-2458] undeclared symbol reg_out2_ID, assumed default net type wire [D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu.v:112]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/EX_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/IF_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/MEM_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ME_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/WB_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WB_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'compile' step aborted
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/ComputerScience/CodeApp/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/Data_Mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/testIns_data.coe'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/Instr_Mem.mif'
+INFO: [SIM-utils-43] Exported 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim/testIns_text.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+"xelab -wto 74e3188a75c1486d923af539ec70095a --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/ComputerScience/CodeApp/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 74e3188a75c1486d923af539ec70095a --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -view {D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/testbench_behav.wcfg
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 50 ns : File "D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sim_1/new/testbench.v" Line 39
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 968.293 ; gain = 0.000
+add_files -norecurse D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/harzard_unit.v
+add_files -norecurse D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/control_unit.v
+add_files -norecurse D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/control_unit.v
+WARNING: [filemgmt 56-12] File 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/control_unit.v' cannot be added to the project because it already exists in the project, skipping this file
+add_files -norecurse D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/control_unit.v
+WARNING: [filemgmt 56-12] File 'D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/control_unit.v' cannot be added to the project because it already exists in the project, skipping this file
+add_files -norecurse D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/data_ext.v
+close [ open D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu_1.v w ]
+add_files D:/ComputerScience/cs_COD_Spring_2022/Lab5/lab5/lab5.srcs/sources_1/new/cpu_1.v
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 995.773 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 26 23:46:06 2022...

@@ -1,0 +1,399 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Apr 11 19:09:07 2022
+# Process ID: 24436
+# Current directory: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16504 D:\ComputerScience\cs_COD_Spring_2022\Lab4\lab4\lab4.xpr
+# Log file: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/vivado.log
+# Journal file: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.xpr
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+reset_run impl_1 -prev_step 
+export_ip_user_files -of_objects  [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/imports/Lab4/PDU-v0.1_0410.v] -no_script -reset -force -quiet
+remove_files  D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/imports/Lab4/PDU-v0.1_0410.v
+file delete -force D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/imports/Lab4/PDU-v0.1_0410.v
+add_files -norecurse -scan_for_includes D:/ComputerScience/cs_COD_Spring_2022/Lab4/PDU-v0.2_0411.v
+import_files -norecurse D:/ComputerScience/cs_COD_Spring_2022/Lab4/PDU-v0.2_0411.v
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+update_files -from_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/PDU-v0.21_0411.v -to_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/imports/Lab4/PDU-v0.2_0411.v -filesets [get_filesets *]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+close_hw_manager
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property -dict [list CONFIG.coefficient_file {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/sort_text.coe}] [get_ips inst_mem]
+generate_target all [get_files  D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci]
+catch { config_ip_cache -export [get_ips -all inst_mem] }
+export_ip_user_files -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci] -no_script -sync -force -quiet
+reset_run inst_mem_synth_1
+launch_runs -jobs 8 inst_mem_synth_1
+export_simulation -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci] -directory D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/sim_scripts -ip_user_files_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files -ipstatic_source_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/modelsim} {questa=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/questa} {riviera=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/riviera} {activehdl=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property -dict [list CONFIG.coefficient_file {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/sort_data.coe}] [get_ips data_mem]
+generate_target all [get_files  D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem/data_mem.xci]
+catch { config_ip_cache -export [get_ips -all data_mem] }
+export_ip_user_files -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem/data_mem.xci] -no_script -sync -force -quiet
+reset_run data_mem_synth_1
+launch_runs -jobs 8 data_mem_synth_1
+export_simulation -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem/data_mem.xci] -directory D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/sim_scripts -ip_user_files_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files -ipstatic_source_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/modelsim} {questa=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/questa} {riviera=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/riviera} {activehdl=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property -dict [list CONFIG.coefficient_file {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/sort_text1.coe}] [get_ips inst_mem]
+generate_target all [get_files  D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci]
+catch { config_ip_cache -export [get_ips -all inst_mem] }
+export_ip_user_files -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci] -no_script -sync -force -quiet
+reset_run inst_mem_synth_1
+launch_runs -jobs 8 inst_mem_synth_1
+export_simulation -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci] -directory D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/sim_scripts -ip_user_files_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files -ipstatic_source_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/modelsim} {questa=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/questa} {riviera=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/riviera} {activehdl=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_manager
+open_project D:/ComputerScience/cs_COD_Spring_2022/Lab2/lab2/lab2.xpr
+update_compile_order -fileset sources_1
+current_project lab4
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+file mkdir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/new/testbench.v w ]
+add_files -fileset sim_1 D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/new/testbench.v
+update_compile_order -fileset sim_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+launch_simulation
+source main.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top sim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+set_property -name {xsim.simulate.runtime} -value {10000ns} -objects [get_filesets sim_1]
+launch_simulation
+close_sim
+close_hw_manager
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_simulation
+source sim.tcl
+close_sim
+launch_simulation
+source sim.tcl
+relaunch_sim
+close_sim
+launch_simulation
+source sim.tcl
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_sim
+launch_simulation
+source sim.tcl
+set_property -dict [list CONFIG.coefficient_file {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/test_text.coe}] [get_ips inst_mem]
+generate_target all [get_files  D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci]
+catch { config_ip_cache -export [get_ips -all inst_mem] }
+catch { [ delete_ip_run [get_ips -all inst_mem] ] }
+export_ip_user_files -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci]
+export_simulation -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci] -directory D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/sim_scripts -ip_user_files_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files -ipstatic_source_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/modelsim} {questa=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/questa} {riviera=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/riviera} {activehdl=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_project lab2
+current_project lab4
+set_property -dict [list CONFIG.coefficient_file {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/test_data.coe}] [get_ips data_mem]
+current_project lab2
+current_project lab4
+generate_target all [get_files  D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem/data_mem.xci]
+catch { config_ip_cache -export [get_ips -all data_mem] }
+catch { [ delete_ip_run [get_ips -all data_mem] ] }
+export_ip_user_files -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem/data_mem.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem/data_mem.xci]
+export_simulation -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem/data_mem.xci] -directory D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/sim_scripts -ip_user_files_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files -ipstatic_source_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/modelsim} {questa=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/questa} {riviera=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/riviera} {activehdl=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_project lab2
+current_project lab4
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source sim.tcl
+relaunch_sim
+relaunch_sim
+remove_forces { {/sim/cpu/inst_mem/spo} }
+relaunch_sim
+close_sim
+launch_simulation
+source sim.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg}
+add_files -fileset sim_1 -norecurse D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg
+set_property xsim.view D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg
+source sim.tcl
+save_wave_config {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg
+source sim.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg
+source sim.tcl
+save_wave_config {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.runs/impl_1/main.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property -dict [list CONFIG.coefficient_file {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/sort_text2.coe}] [get_ips inst_mem]
+generate_target all [get_files  D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci]
+catch { config_ip_cache -export [get_ips -all inst_mem] }
+export_ip_user_files -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci]
+launch_runs -jobs 8 inst_mem_synth_1
+export_simulation -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci] -directory D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/sim_scripts -ip_user_files_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files -ipstatic_source_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/modelsim} {questa=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/questa} {riviera=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/riviera} {activehdl=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_project lab2
+set_property -dict [list CONFIG.coefficient_file {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/sort_data.coe}] [get_ips data_mem]
+current_project lab4
+close_sim
+launch_simulation
+close_hw_manager
+launch_simulation
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg
+source sim.tcl
+set_property -dict [list CONFIG.coefficient_file {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/sort_bubble_text.coe}] [get_ips inst_mem]
+generate_target all [get_files  D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci]
+catch { config_ip_cache -export [get_ips -all inst_mem] }
+export_ip_user_files -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci] -no_script -sync -force -quiet
+reset_run inst_mem_synth_1
+launch_runs -jobs 8 inst_mem_synth_1
+export_simulation -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci] -directory D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/sim_scripts -ip_user_files_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files -ipstatic_source_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/modelsim} {questa=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/questa} {riviera=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/riviera} {activehdl=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_project lab2
+current_project lab4
+current_project lab2
+current_project lab4
+save_wave_config {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg}
+close_sim
+launch_simulation
+launch_simulation
+reset_run inst_mem_synth_1
+launch_simulation
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg
+source sim.tcl
+relaunch_sim
+set_property -dict [list CONFIG.coefficient_file {C:/Users/Lenovo/Desktop/text.coe}] [get_ips inst_mem]
+generate_target all [get_files  D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci]
+catch { config_ip_cache -export [get_ips -all inst_mem] }
+export_ip_user_files -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci] -no_script -sync -force -quiet
+launch_runs -jobs 8 inst_mem_synth_1
+export_simulation -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/inst_mem.xci] -directory D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/sim_scripts -ip_user_files_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files -ipstatic_source_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/modelsim} {questa=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/questa} {riviera=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/riviera} {activehdl=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_project lab2
+current_project lab4
+reset_run inst_mem_synth_1
+current_project lab2
+current_project lab4
+save_wave_config {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg
+source sim.tcl
+close_sim
+launch_simulation
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg
+source sim.tcl
+close_sim
+launch_simulation
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg
+source sim.tcl
+close_sim
+launch_simulation
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg
+source sim.tcl
+close_sim
+launch_simulation
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg
+source sim.tcl
+close_sim
+launch_simulation
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg
+source sim.tcl
+close_sim
+launch_simulation
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg
+source sim.tcl
+close_sim
+launch_simulation
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg
+source sim.tcl
+close_sim
+launch_simulation
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg
+source sim.tcl
+close_sim
+launch_simulation
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg
+source sim.tcl
+relaunch_sim
+restart
+relaunch_sim
+set_property -dict [list CONFIG.coefficient_file {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/sort_data.coe}] [get_ips data_mem]
+generate_target all [get_files  D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem/data_mem.xci]
+catch { config_ip_cache -export [get_ips -all data_mem] }
+export_ip_user_files -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem/data_mem.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem/data_mem.xci]
+launch_runs -jobs 8 data_mem_synth_1
+export_simulation -of_objects [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem/data_mem.xci] -directory D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/sim_scripts -ip_user_files_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files -ipstatic_source_dir D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/modelsim} {questa=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/questa} {riviera=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/riviera} {activehdl=D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_project lab2
+current_project lab4
+current_project lab2
+current_project lab4
+save_wave_config {D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg}
+close_sim
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_simulation
+open_wave_config D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/sim_behav.wcfg
+source sim.tcl
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+close_sim
+current_project lab2
+close_project

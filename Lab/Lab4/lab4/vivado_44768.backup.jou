@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Apr 20 21:10:21 2022
+# Process ID: 44768
+# Current directory: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent45116 D:\ComputerScience\cs_COD_Spring_2022\Lab4\lab4\lab4.xpr
+# Log file: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/vivado.log
+# Journal file: D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/new/control.v] -no_script -reset -force -quiet
+remove_files  D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/new/control.v
+export_ip_user_files -of_objects  [get_files D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/new/pc_control.v] -no_script -reset -force -quiet
+remove_files  D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/new/pc_control.v
+file delete -force D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/new/pc_control.v

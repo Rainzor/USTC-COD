@@ -1,0 +1,20 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sim_1/new/sim_blk.v,1648298532,verilog,,,,sim_blk,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sim_1/new/sim_blk_mod.v,1648298065,verilog,,,,sim_blk_mod,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sim_1/new/sim_dist.v,1648297721,verilog,,,,sim_dist,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sim_1/new/sim_register.v,1648291643,verilog,,,,regfile_sim,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sim_1/new/testDEP.v,1648551722,verilog,,,,testDEP,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sim_1/new/testbench_sort.v,1648650918,verilog,,,,testbench_sort,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v,1648299046,verilog,,D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sim_1/new/sim_blk_mod.v,,blk_mem_gen_0,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sources_1/ip/dist_mem_gen_0/sim/dist_mem_gen_0.v,1648290702,verilog,,D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sim_1/new/sim_dist.v,,dist_mem_gen_0,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sources_1/ip/dist_mem_gen_1/sim/dist_mem_gen_1.v,1648598825,verilog,,D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sources_1/new/DEP.v,,dist_mem_gen_1,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sources_1/new/DEP.v,1648651086,verilog,,D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sources_1/new/DP.v,,DEP,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sources_1/new/DP.v,1648651027,verilog,,D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sources_1/new/data_sort.v,,DP,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sources_1/new/Sort.v,1648607624,verilog,,D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sources_1/new/segment_trans.v,,SORT,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sources_1/new/data_sort.v,1648650689,verilog,,D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sources_1/new/segment_trans.v,,data_sort,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sources_1/new/register_file.v,1648291931,verilog,,D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sim_1/new/sim_register.v,,register_file,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sources_1/new/segment_trans.v,1648556475,verilog,,D:/ComputerScience/cs_COD_Spring_2021/Lab2/lab2/lab2.srcs/sim_1/new/testbench_sort.v,,segment_trans,,,,,,,,

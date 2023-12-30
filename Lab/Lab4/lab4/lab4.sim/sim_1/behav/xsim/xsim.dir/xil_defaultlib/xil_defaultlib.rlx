@@ -1,0 +1,15 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/imports/lab4/sim.v,1649846848,verilog,,,,test_for_cpu,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/new/testbench.v,1649847188,verilog,,,,test_for_sort,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/imports/new/a.v,1649585585,verilog,,D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/new/cpu.v,,alu,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/imports/new/register_file.v,1649762885,verilog,,D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/new/testbench.v,,reg_file,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem/sim/data_mem.v,1650459601,verilog,,D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/sim/inst_mem.v,,data_mem,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/data_mem2/sim/data_mem2.v,1650458986,verilog,,D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem2/sim/inst_mem2.v,,data_mem2,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem/sim/inst_mem.v,1650459577,verilog,,D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/imports/new/a.v,,inst_mem,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/ip/inst_mem2/sim/inst_mem2.v,1649846509,verilog,,D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/imports/new/a.v,,inst_mem2,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/new/cpu.v,1649767167,verilog,,D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/imports/new/register_file.v,,cpu,,,,,,,,
+D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sources_1/new/test_cpu.v,1650458375,verilog,,D:/ComputerScience/cs_COD_Spring_2022/Lab4/lab4/lab4.srcs/sim_1/imports/lab4/sim.v,,test_cpu,,,,,,,,
